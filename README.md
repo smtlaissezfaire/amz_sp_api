@@ -80,6 +80,17 @@ url = response&.payload&.dig(:url)
 AmzSpApi.decrypt_and_inflate_document(ciphertext, response.payload)
 ```
 
+## Developing Locally
+
+### Setup
+
+git submodule init
+git submodule update
+brew installl swagger-codegen # or equivalent
+
+### Generate the code
+./codegen.sh
+
 ## Thanks
 
 to https://github.com/patterninc/muffin_man as the basis for [sp_api_client.rb](lib/sp_api_client.rb)
