@@ -8,5 +8,5 @@ Name | Type | Description | Notes
 **reason_code** | **String** | Provides a reason code for the status of the package that will provide additional information about the transportation status. | 
 **status_date_time** | **DateTime** | The date and time when the shipment status was updated. This field is expected to be in ISO-8601 date/time format, with UTC time zone or UTC offset. For example, 2020-07-16T23:00:00Z or 2020-07-16T23:00:00+01:00. | 
 **status_location_address** | [**Address**](Address.md) |  | 
-**shipment_schedule** | [**StatusUpdateDetailsShipmentSchedule**](StatusUpdateDetailsShipmentSchedule.md) |  | [optional] 
+**shipment_schedule** | [**ShipmentSchedule**](ShipmentSchedule.md) |  | [optional] 
 

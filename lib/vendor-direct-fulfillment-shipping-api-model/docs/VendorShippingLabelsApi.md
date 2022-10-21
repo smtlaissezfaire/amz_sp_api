@@ -4,16 +4,64 @@ All URIs are relative to *https://sellingpartnerapi-na.amazon.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_shipping_label**](VendorShippingLabelsApi.md#get_shipping_label) | **GET** /vendor/directFulfillment/shipping/v1/shippingLabels/{purchaseOrderNumber} | 
-[**get_shipping_labels**](VendorShippingLabelsApi.md#get_shipping_labels) | **GET** /vendor/directFulfillment/shipping/v1/shippingLabels | 
-[**submit_shipping_label_request**](VendorShippingLabelsApi.md#submit_shipping_label_request) | **POST** /vendor/directFulfillment/shipping/v1/shippingLabels | 
+[**create_shipping_labels**](VendorShippingLabelsApi.md#create_shipping_labels) | **POST** /vendor/directFulfillment/shipping/2021-12-28/shippingLabels/{purchaseOrderNumber} | 
+[**get_shipping_label**](VendorShippingLabelsApi.md#get_shipping_label) | **GET** /vendor/directFulfillment/shipping/2021-12-28/shippingLabels/{purchaseOrderNumber} | 
+[**get_shipping_labels**](VendorShippingLabelsApi.md#get_shipping_labels) | **GET** /vendor/directFulfillment/shipping/2021-12-28/shippingLabels | 
+[**submit_shipping_label_request**](VendorShippingLabelsApi.md#submit_shipping_label_request) | **POST** /vendor/directFulfillment/shipping/2021-12-28/shippingLabels | 
+
+# **create_shipping_labels**
+> ShippingLabel create_shipping_labels(bodypurchase_order_number)
+
+
+
+Creates shipping labels for a purchase order and returns the labels.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 10 | 10 |  The `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values then those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](doc:usage-plans-and-rate-limits-in-the-sp-api).
+
+### Example
+```ruby
+# load the gem
+require 'vendor-direct-fulfillment-shipping-api-model'
+
+api_instance = AmzSpApi::VendorDirectFulfillmentShippingApiModel::VendorShippingLabelsApi.new
+body = AmzSpApi::VendorDirectFulfillmentShippingApiModel::CreateShippingLabelsRequest.new # CreateShippingLabelsRequest | 
+purchase_order_number = 'purchase_order_number_example' # String | The purchase order number for which you want to return the shipping labels. It should be the same purchaseOrderNumber as received in the order.
+
+
+begin
+  result = api_instance.create_shipping_labels(bodypurchase_order_number)
+  p result
+rescue AmzSpApi::VendorDirectFulfillmentShippingApiModel::ApiError => e
+  puts "Exception when calling VendorShippingLabelsApi->create_shipping_labels: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CreateShippingLabelsRequest**](CreateShippingLabelsRequest.md)|  | 
+ **purchase_order_number** | **String**| The purchase order number for which you want to return the shipping labels. It should be the same purchaseOrderNumber as received in the order. | 
+
+### Return type
+
+[**ShippingLabel**](ShippingLabel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
 
 # **get_shipping_label**
-> GetShippingLabelResponse get_shipping_label(purchase_order_number)
+> ShippingLabel get_shipping_label(purchase_order_number)
 
 
 
-Returns a shipping label for the purchaseOrderNumber that you specify.  **Usage Plans:**  | Plan type | Rate (requests per second) | Burst | | ---- | ---- | ---- | |Default| 10 | 10 | |Selling partner specific| Variable | Variable |  The x-amzn-RateLimit-Limit response header returns the usage plan rate limits that were applied to the requested operation. Rate limits for some selling partners will vary from the default rate and burst shown in the table above. For more information, see \"Usage Plans and Rate Limits\" in the Selling Partner API documentation.
+Returns a shipping label for the purchaseOrderNumber that you specify.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 10 | 10 |  The `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values then those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](doc:usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```ruby
@@ -40,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetShippingLabelResponse**](GetShippingLabelResponse.md)
+[**ShippingLabel**](ShippingLabel.md)
 
 ### Authorization
 
@@ -54,11 +102,11 @@ No authorization required
 
 
 # **get_shipping_labels**
-> GetShippingLabelListResponse get_shipping_labels(created_after, created_before, opts)
+> ShippingLabelList get_shipping_labels(created_after, created_before, opts)
 
 
 
-Returns a list of shipping labels created during the time frame that you specify. You define that time frame using the createdAfter and createdBefore parameters. You must use both of these parameters. The date range to search must not be more than 7 days.  **Usage Plans:**  | Plan type | Rate (requests per second) | Burst | | ---- | ---- | ---- | |Default| 10 | 10 | |Selling partner specific| Variable | Variable |  The x-amzn-RateLimit-Limit response header returns the usage plan rate limits that were applied to the requested operation. Rate limits for some selling partners will vary from the default rate and burst shown in the table above. For more information, see \"Usage Plans and Rate Limits\" in the Selling Partner API documentation.
+Returns a list of shipping labels created during the time frame that you specify. You define that time frame using the createdAfter and createdBefore parameters. You must use both of these parameters. The date range to search must not be more than 7 days.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 10 | 10 |  The `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values then those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](doc:usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```ruby
@@ -96,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetShippingLabelListResponse**](GetShippingLabelListResponse.md)
+[**ShippingLabelList**](ShippingLabelList.md)
 
 ### Authorization
 
@@ -105,16 +153,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, payload
+ - **Accept**: application/json, pagination, shippingLabels
 
 
 
 # **submit_shipping_label_request**
-> SubmitShippingLabelsResponse submit_shipping_label_request(body)
+> TransactionReference submit_shipping_label_request(body)
 
 
 
-Creates a shipping label for a purchase order and returns a transactionId for reference.  **Usage Plans:**  | Plan type | Rate (requests per second) | Burst | | ---- | ---- | ---- | |Default| 10 | 10 | |Selling partner specific| Variable | Variable |  The x-amzn-RateLimit-Limit response header returns the usage plan rate limits that were applied to the requested operation. Rate limits for some selling partners will vary from the default rate and burst shown in the table above. For more information, see \"Usage Plans and Rate Limits\" in the Selling Partner API documentation.
+Creates a shipping label for a purchase order and returns a transactionId for reference.  **Usage Plan:**  | Rate (requests per second) | Burst | | ---- | ---- | | 10 | 10 |  The `x-amzn-RateLimit-Limit` response header returns the usage plan rate limits that were applied to the requested operation, when available. The table above indicates the default rate and burst values for this operation. Selling partners whose business demands require higher throughput may see higher rate and burst values then those shown here. For more information, see [Usage Plans and Rate Limits in the Selling Partner API](doc:usage-plans-and-rate-limits-in-the-sp-api).
 
 ### Example
 ```ruby
@@ -141,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SubmitShippingLabelsResponse**](SubmitShippingLabelsResponse.md)
+[**TransactionReference**](TransactionReference.md)
 
 ### Authorization
 
