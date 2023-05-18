@@ -12,6 +12,7 @@ Swagger Codegen version: 3.0.43
 require 'date'
 
 module AmzSpApi::ProductFeesApiModel
+  # A product, marketplace, and proposed price used to request estimated fees.
   class FeesEstimateRequest
     # A marketplace identifier.
     attr_accessor :marketplace_id

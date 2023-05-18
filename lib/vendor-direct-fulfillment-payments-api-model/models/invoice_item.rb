@@ -32,7 +32,7 @@ module AmzSpApi::VendorDirectFulfillmentPaymentsApiModel
     # The vendor's order number for this order.
     attr_accessor :vendor_order_number
 
-    # HSN tax code. The HSN number cannot contain alphabets.
+    # Harmonized System of Nomenclature (HSN) tax code. The HSN number cannot contain alphabets.
     attr_accessor :hsn_code
 
     # Individual tax details per line item.

@@ -91,4 +91,10 @@ describe 'OrderItem' do
     end
   end
 
+  describe 'test attribute "buyer_customized_info"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
 end

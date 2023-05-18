@@ -17,6 +17,12 @@ module AmzSpApi::CatalogItemsApiModel
     # Amazon marketplace identifier.
     attr_accessor :marketplace_id
 
+    # Identifies an Amazon catalog item is intended for an adult audience or is sexual in nature.
+    attr_accessor :adult_product
+
+    # Identifies an Amazon catalog item is autographed by a player or celebrity.
+    attr_accessor :autographed
+
     # Name of the brand associated with an Amazon catalog item.
     attr_accessor :brand
 
@@ -24,6 +30,9 @@ module AmzSpApi::CatalogItemsApiModel
 
     # Name of the color associated with an Amazon catalog item.
     attr_accessor :color
+
+    # Individual contributors to the creation of an item, such as the authors or actors.
+    attr_accessor :contributors
 
     # Classification type associated with the Amazon catalog item.
     attr_accessor :item_classification
@@ -34,6 +43,9 @@ module AmzSpApi::CatalogItemsApiModel
     # Name of the manufacturer associated with an Amazon catalog item.
     attr_accessor :manufacturer
 
+    # Identifies an Amazon catalog item is memorabilia valued for its connection with historical events, culture, or entertainment.
+    attr_accessor :memorabilia
+
     # Model number associated with an Amazon catalog item.
     attr_accessor :model_number
 
@@ -43,11 +55,17 @@ module AmzSpApi::CatalogItemsApiModel
     # Part number associated with an Amazon catalog item.
     attr_accessor :part_number
 
+    # First date on which an Amazon catalog item is shippable to customers.
+    attr_accessor :release_date
+
     # Name of the size associated with an Amazon catalog item.
     attr_accessor :size
 
     # Name of the style associated with an Amazon catalog item.
     attr_accessor :style
+
+    # Identifies an Amazon catalog item is eligible for trade-in.
+    attr_accessor :trade_in_eligible
 
     # Identifier of the website display group associated with an Amazon catalog item.
     attr_accessor :website_display_group
@@ -81,17 +99,23 @@ module AmzSpApi::CatalogItemsApiModel
     def self.attribute_map
       {
         :'marketplace_id' => :'marketplaceId',
+        :'adult_product' => :'adultProduct',
+        :'autographed' => :'autographed',
         :'brand' => :'brand',
         :'browse_classification' => :'browseClassification',
         :'color' => :'color',
+        :'contributors' => :'contributors',
         :'item_classification' => :'itemClassification',
         :'item_name' => :'itemName',
         :'manufacturer' => :'manufacturer',
+        :'memorabilia' => :'memorabilia',
         :'model_number' => :'modelNumber',
         :'package_quantity' => :'packageQuantity',
         :'part_number' => :'partNumber',
+        :'release_date' => :'releaseDate',
         :'size' => :'size',
         :'style' => :'style',
+        :'trade_in_eligible' => :'tradeInEligible',
         :'website_display_group' => :'websiteDisplayGroup',
         :'website_display_group_name' => :'websiteDisplayGroupName'
       }
@@ -101,17 +125,23 @@ module AmzSpApi::CatalogItemsApiModel
     def self.openapi_types
       {
         :'marketplace_id' => :'Object',
+        :'adult_product' => :'Object',
+        :'autographed' => :'Object',
         :'brand' => :'Object',
         :'browse_classification' => :'Object',
         :'color' => :'Object',
+        :'contributors' => :'Object',
         :'item_classification' => :'Object',
         :'item_name' => :'Object',
         :'manufacturer' => :'Object',
+        :'memorabilia' => :'Object',
         :'model_number' => :'Object',
         :'package_quantity' => :'Object',
         :'part_number' => :'Object',
+        :'release_date' => :'Object',
         :'size' => :'Object',
         :'style' => :'Object',
+        :'trade_in_eligible' => :'Object',
         :'website_display_group' => :'Object',
         :'website_display_group_name' => :'Object'
       }
@@ -142,6 +172,14 @@ module AmzSpApi::CatalogItemsApiModel
         self.marketplace_id = attributes[:'marketplace_id']
       end
 
+      if attributes.key?(:'adult_product')
+        self.adult_product = attributes[:'adult_product']
+      end
+
+      if attributes.key?(:'autographed')
+        self.autographed = attributes[:'autographed']
+      end
+
       if attributes.key?(:'brand')
         self.brand = attributes[:'brand']
       end
@@ -152,6 +190,12 @@ module AmzSpApi::CatalogItemsApiModel
 
       if attributes.key?(:'color')
         self.color = attributes[:'color']
+      end
+
+      if attributes.key?(:'contributors')
+        if (value = attributes[:'contributors']).is_a?(Array)
+          self.contributors = value
+        end
       end
 
       if attributes.key?(:'item_classification')
@@ -166,6 +210,10 @@ module AmzSpApi::CatalogItemsApiModel
         self.manufacturer = attributes[:'manufacturer']
       end
 
+      if attributes.key?(:'memorabilia')
+        self.memorabilia = attributes[:'memorabilia']
+      end
+
       if attributes.key?(:'model_number')
         self.model_number = attributes[:'model_number']
       end
@@ -178,12 +226,20 @@ module AmzSpApi::CatalogItemsApiModel
         self.part_number = attributes[:'part_number']
       end
 
+      if attributes.key?(:'release_date')
+        self.release_date = attributes[:'release_date']
+      end
+
       if attributes.key?(:'size')
         self.size = attributes[:'size']
       end
 
       if attributes.key?(:'style')
         self.style = attributes[:'style']
+      end
+
+      if attributes.key?(:'trade_in_eligible')
+        self.trade_in_eligible = attributes[:'trade_in_eligible']
       end
 
       if attributes.key?(:'website_display_group')
@@ -231,17 +287,23 @@ module AmzSpApi::CatalogItemsApiModel
       return true if self.equal?(o)
       self.class == o.class &&
           marketplace_id == o.marketplace_id &&
+          adult_product == o.adult_product &&
+          autographed == o.autographed &&
           brand == o.brand &&
           browse_classification == o.browse_classification &&
           color == o.color &&
+          contributors == o.contributors &&
           item_classification == o.item_classification &&
           item_name == o.item_name &&
           manufacturer == o.manufacturer &&
+          memorabilia == o.memorabilia &&
           model_number == o.model_number &&
           package_quantity == o.package_quantity &&
           part_number == o.part_number &&
+          release_date == o.release_date &&
           size == o.size &&
           style == o.style &&
+          trade_in_eligible == o.trade_in_eligible &&
           website_display_group == o.website_display_group &&
           website_display_group_name == o.website_display_group_name
     end
@@ -255,7 +317,7 @@ module AmzSpApi::CatalogItemsApiModel
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [marketplace_id, brand, browse_classification, color, item_classification, item_name, manufacturer, model_number, package_quantity, part_number, size, style, website_display_group, website_display_group_name].hash
+      [marketplace_id, adult_product, autographed, brand, browse_classification, color, contributors, item_classification, item_name, manufacturer, memorabilia, model_number, package_quantity, part_number, release_date, size, style, trade_in_eligible, website_display_group, website_display_group_name].hash
     end
 
     # Builds the object from hash

@@ -17,7 +17,7 @@ module AmzSpApi::VendorInvoicesApiModel
     # The tax registration type for the entity.
     attr_accessor :tax_registration_type
 
-    # The tax registration number for the entity. For example, VAT ID.
+    # The tax registration number for the entity. For example, VAT ID, Consumption Tax ID.
     attr_accessor :tax_registration_number
 
     class EnumAttributeValidator

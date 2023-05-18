@@ -20,7 +20,7 @@ module AmzSpApi::ReportsApiModel
     # The identifier for the report. This identifier is unique only in combination with a seller ID.
     attr_accessor :report_id
 
-    # The report type.
+    # The report type. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information.
     attr_accessor :report_type
 
     # The start of a date and time range used for selecting the data to report.

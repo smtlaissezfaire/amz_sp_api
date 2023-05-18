@@ -39,7 +39,7 @@ module AmzSpApi::VendorDirectFulfillmentPaymentsApiModel
     # Individual tax details per line item.
     attr_accessor :tax_totals
 
-    # Additional details provided by the selling party, for tax related or other purposes.
+    # Additional details provided by the selling party, for tax-related or other purposes.
     attr_accessor :additional_details
 
     # Total charge amount details for all line items.

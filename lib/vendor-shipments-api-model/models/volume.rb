@@ -12,7 +12,7 @@ Swagger Codegen version: 3.0.43
 require 'date'
 
 module AmzSpApi::VendorShipmentsApiModel
-  # The volume of the container.
+  # The volume of the shipment.
   class Volume
     # The unit of measurement.
     attr_accessor :unit_of_measure

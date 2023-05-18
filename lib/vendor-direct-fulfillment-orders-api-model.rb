@@ -18,6 +18,7 @@ require 'vendor-direct-fulfillment-orders-api-model/configuration'
 # Models
 require 'vendor-direct-fulfillment-orders-api-model/models/acknowledgement_status'
 require 'vendor-direct-fulfillment-orders-api-model/models/address'
+require 'vendor-direct-fulfillment-orders-api-model/models/buyer_customized_info_detail'
 require 'vendor-direct-fulfillment-orders-api-model/models/decimal'
 require 'vendor-direct-fulfillment-orders-api-model/models/error'
 require 'vendor-direct-fulfillment-orders-api-model/models/error_list'

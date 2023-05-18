@@ -17,10 +17,10 @@ module AmzSpApi::VendorShipmentsApiModel
     # A list of pallet identifiers.
     attr_accessor :pallet_identifiers
 
-    # Number of layers per pallet.
+    # Number of layers per pallet. Only applicable to container type Pallet.
     attr_accessor :tier
 
-    # Number of cartons per layer on the pallet.
+    # Number of cartons per layer on the pallet. Only applicable to container type Pallet.
     attr_accessor :block
 
     attr_accessor :dimensions

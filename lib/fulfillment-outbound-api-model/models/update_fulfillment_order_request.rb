@@ -12,6 +12,7 @@ Swagger Codegen version: 3.0.43
 require 'date'
 
 module AmzSpApi::FulfillmentOutboundApiModel
+  # The request body schema for the updateFulfillmentOrder operation.
   class UpdateFulfillmentOrderRequest
     # The marketplace the fulfillment order is placed against.
     attr_accessor :marketplace_id

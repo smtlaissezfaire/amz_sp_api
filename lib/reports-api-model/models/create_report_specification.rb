@@ -16,7 +16,7 @@ module AmzSpApi::ReportsApiModel
   class CreateReportSpecification
     attr_accessor :report_options
 
-    # The report type.
+    # The report type. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information.
     attr_accessor :report_type
 
     # The start of a date and time range, in ISO 8601 date time format, used for selecting the data to report. The default is now. The value must be prior to or equal to the current date and time. Not all report types make use of this.

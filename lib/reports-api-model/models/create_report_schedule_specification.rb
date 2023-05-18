@@ -13,7 +13,7 @@ require 'date'
 
 module AmzSpApi::ReportsApiModel
   class CreateReportScheduleSpecification
-    # The report type.
+    # The report type. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information.
     attr_accessor :report_type
 
     # A list of marketplace identifiers for the report schedule.

@@ -13,7 +13,7 @@ require 'date'
 
 module AmzSpApi::VendorShipmentsApiModel
   class TransactionReference
-    # GUID assigned by Amazon to identify this transaction. This value can be used with the Transaction Status API to return the status of this transaction.
+    # GUID assigned by Buyer to identify this transaction. This value can be used with the Transaction Status API to return the status of this transaction.
     attr_accessor :transaction_id
 
     # Attribute mapping from ruby-style variable name to JSON key.

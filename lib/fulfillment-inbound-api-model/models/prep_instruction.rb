@@ -19,6 +19,15 @@ module AmzSpApi::FulfillmentInboundApiModel
     BLACK_SHRINK_WRAPPING = 'BlackShrinkWrapping'.freeze
     LABELING = 'Labeling'.freeze
     HANG_GARMENT = 'HangGarment'.freeze
+    SET_CREATION = 'SetCreation'.freeze
+    BOXING = 'Boxing'.freeze
+    REMOVE_FROM_HANGER = 'RemoveFromHanger'.freeze
+    DEBUNDLE = 'Debundle'.freeze
+    SUFFOCATION_STICKERING = 'SuffocationStickering'.freeze
+    CAP_SEALING = 'CapSealing'.freeze
+    SET_STICKERING = 'SetStickering'.freeze
+    BLANK_STICKERING = 'BlankStickering'.freeze
+    NO_PREP = 'NoPrep'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string

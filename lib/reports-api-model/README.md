@@ -131,7 +131,7 @@ rescue AmzSpApi::ReportsApiModel::ApiError => e
 end
 
 api_instance = AmzSpApi::ReportsApiModel::ReportsApi.new
-report_types = ['report_types_example'] # Array<String> | A list of report types used to filter report schedules.
+report_types = ['report_types_example'] # Array<String> | A list of report types used to filter report schedules. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information.
 
 
 begin
@@ -143,7 +143,7 @@ end
 
 api_instance = AmzSpApi::ReportsApiModel::ReportsApi.new
 opts = { 
-  report_types: ['report_types_example'], # Array<String> | A list of report types used to filter reports. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required.
+  report_types: ['report_types_example'], # Array<String> | A list of report types used to filter reports. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information. When reportTypes is provided, the other filter parameters (processingStatuses, marketplaceIds, createdSince, createdUntil) and pageSize may also be provided. Either reportTypes or nextToken is required.
   processing_statuses: ['processing_statuses_example'], # Array<String> | A list of processing statuses used to filter reports.
   marketplace_ids: ['marketplace_ids_example'], # Array<String> | A list of marketplace identifiers used to filter reports. The reports returned will match at least one of the marketplaces that you specify.
   page_size: 10, # Integer | The maximum number of reports to return in a single call.

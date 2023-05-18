@@ -12,7 +12,7 @@ Swagger Codegen version: 3.0.43
 require 'date'
 
 module AmzSpApi::VendorShipmentsApiModel
-  # The weight.
+  # The weight of the shipment.
   class Weight
     # The unit of measurement.
     attr_accessor :unit_of_measure

@@ -12,7 +12,7 @@ Swagger Codegen version: 3.0.43
 require 'date'
 
 module AmzSpApi::FulfillmentOutboundApiModel
-  # Delivery information for a scheduled delivery.
+  # Delivery information for a scheduled delivery. This is only available in the JP marketplace.
   class ScheduledDeliveryInfo
     # The time zone of the destination address for the fulfillment order preview. Must be an IANA time zone name. Example: Asia/Tokyo.
     attr_accessor :delivery_time_zone

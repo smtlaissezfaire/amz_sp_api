@@ -12,7 +12,7 @@ Swagger Codegen version: 3.0.43
 require 'date'
 
 module AmzSpApi::FinancesApiModel
-  # A list of information about shipment settle financial events.
+  # A list of `ShipmentEvent` items.
   class ShipmentSettleEventList
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map

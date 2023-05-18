@@ -37,6 +37,8 @@ module AmzSpApi::VendorDirectFulfillmentOrdersApiModel
 
     attr_accessor :total_price
 
+    attr_accessor :buyer_customized_info
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -49,7 +51,8 @@ module AmzSpApi::VendorDirectFulfillmentOrdersApiModel
         :'gift_details' => :'giftDetails',
         :'net_price' => :'netPrice',
         :'tax_details' => :'taxDetails',
-        :'total_price' => :'totalPrice'
+        :'total_price' => :'totalPrice',
+        :'buyer_customized_info' => :'buyerCustomizedInfo'
       }
     end
 
@@ -65,7 +68,8 @@ module AmzSpApi::VendorDirectFulfillmentOrdersApiModel
         :'gift_details' => :'Object',
         :'net_price' => :'Object',
         :'tax_details' => :'Object',
-        :'total_price' => :'Object'
+        :'total_price' => :'Object',
+        :'buyer_customized_info' => :'Object'
       }
     end
 
@@ -129,6 +133,10 @@ module AmzSpApi::VendorDirectFulfillmentOrdersApiModel
       if attributes.key?(:'total_price')
         self.total_price = attributes[:'total_price']
       end
+
+      if attributes.key?(:'buyer_customized_info')
+        self.buyer_customized_info = attributes[:'buyer_customized_info']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -173,7 +181,8 @@ module AmzSpApi::VendorDirectFulfillmentOrdersApiModel
           gift_details == o.gift_details &&
           net_price == o.net_price &&
           tax_details == o.tax_details &&
-          total_price == o.total_price
+          total_price == o.total_price &&
+          buyer_customized_info == o.buyer_customized_info
     end
 
     # @see the `==` method
@@ -185,7 +194,7 @@ module AmzSpApi::VendorDirectFulfillmentOrdersApiModel
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [item_sequence_number, buyer_product_identifier, vendor_product_identifier, title, ordered_quantity, scheduled_delivery_shipment, gift_details, net_price, tax_details, total_price].hash
+      [item_sequence_number, buyer_product_identifier, vendor_product_identifier, title, ordered_quantity, scheduled_delivery_shipment, gift_details, net_price, tax_details, total_price, buyer_customized_info].hash
     end
 
     # Builds the object from hash

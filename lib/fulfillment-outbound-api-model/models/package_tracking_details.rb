@@ -28,7 +28,7 @@ module AmzSpApi::FulfillmentOutboundApiModel
     # The phone number of the carrier.
     attr_accessor :carrier_phone_number
 
-    # The URL of the carrier’s website.
+    # The URL of the carrier's website.
     attr_accessor :carrier_url
 
     attr_accessor :ship_date

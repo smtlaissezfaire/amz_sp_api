@@ -17,7 +17,7 @@ module AmzSpApi::ReportsApiModel
     # The identifier for the report schedule. This identifier is unique only in combination with a seller ID.
     attr_accessor :report_schedule_id
 
-    # The report type.
+    # The report type. Refer to [Report Type Values](https://developer-docs.amazon.com/sp-api/docs/report-type-values) for more information.
     attr_accessor :report_type
 
     # A list of marketplace identifiers. The report document's contents will contain data for all of the specified marketplaces, unless the report type indicates otherwise.

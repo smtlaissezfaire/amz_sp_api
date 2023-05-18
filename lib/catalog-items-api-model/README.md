@@ -116,6 +116,8 @@ Class | Method | HTTP request | Description
  - [AmzSpApi::CatalogItemsApiModel::ItemAttributes](docs/ItemAttributes.md)
  - [AmzSpApi::CatalogItemsApiModel::ItemBrowseClassification](docs/ItemBrowseClassification.md)
  - [AmzSpApi::CatalogItemsApiModel::ItemClassificationSalesRank](docs/ItemClassificationSalesRank.md)
+ - [AmzSpApi::CatalogItemsApiModel::ItemContributor](docs/ItemContributor.md)
+ - [AmzSpApi::CatalogItemsApiModel::ItemContributorRole](docs/ItemContributorRole.md)
  - [AmzSpApi::CatalogItemsApiModel::ItemDimensions](docs/ItemDimensions.md)
  - [AmzSpApi::CatalogItemsApiModel::ItemDimensionsByMarketplace](docs/ItemDimensionsByMarketplace.md)
  - [AmzSpApi::CatalogItemsApiModel::ItemDisplayGroupSalesRank](docs/ItemDisplayGroupSalesRank.md)

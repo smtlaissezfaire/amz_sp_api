@@ -111,6 +111,7 @@ Class | Method | HTTP request | Description
 
  - [AmzSpApi::VendorDirectFulfillmentOrdersApiModel::AcknowledgementStatus](docs/AcknowledgementStatus.md)
  - [AmzSpApi::VendorDirectFulfillmentOrdersApiModel::Address](docs/Address.md)
+ - [AmzSpApi::VendorDirectFulfillmentOrdersApiModel::BuyerCustomizedInfoDetail](docs/BuyerCustomizedInfoDetail.md)
  - [AmzSpApi::VendorDirectFulfillmentOrdersApiModel::Decimal](docs/Decimal.md)
  - [AmzSpApi::VendorDirectFulfillmentOrdersApiModel::Error](docs/Error.md)
  - [AmzSpApi::VendorDirectFulfillmentOrdersApiModel::ErrorList](docs/ErrorList.md)

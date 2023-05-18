@@ -12,7 +12,7 @@ Swagger Codegen version: 3.0.43
 require 'date'
 
 module AmzSpApi::FinancesApiModel
-  # List of TaxWithholding events.
+  # A list of `TaxWithholding` events.
   class TaxWithholdingEventList
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
