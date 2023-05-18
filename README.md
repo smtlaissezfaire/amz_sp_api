@@ -86,7 +86,7 @@ AmzSpApi.decrypt_and_inflate_document(ciphertext, response.payload)
 
 git submodule init
 git submodule update
-brew installl swagger-codegen # or equivalent
+brew install swagger-codegen # or equivalent
 
 ### Generate the code
 ./codegen.sh
