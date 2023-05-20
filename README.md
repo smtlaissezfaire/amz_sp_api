@@ -99,3 +99,10 @@ brew install swagger-codegen # or equivalent
 ## Thanks
 
 to https://github.com/patterninc/muffin_man as the basis for [sp_api_client.rb](lib/sp_api_client.rb)
+
+## Bugs:
+
+* sometimes catalog items calls come back as listing items, and vise versa. (`AmzSpApi::ListingsItemsApiModel::Item`
+vs `AmzSpApi::CatalogItemsApiModel`).
+
+If you encounter this error, a simple hack is to pass `return_type: "AmzSpApi::CatalogItemsApiModel::Item"` in the options to the call.
